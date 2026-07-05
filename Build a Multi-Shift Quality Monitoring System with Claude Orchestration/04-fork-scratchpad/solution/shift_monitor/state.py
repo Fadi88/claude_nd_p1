@@ -41,11 +41,16 @@ class HotState(BaseModel):
             raise ValueError(
                 f"hot state {len(payload)} bytes exceeds {HOT_STATE_BYTE_BUDGET}-byte budget"
             )
-        with tempfile.NamedTemporaryFile(
-            mode="wb", dir=path.parent, delete=False, prefix=".hot_state.", suffix=".tmp"
-        ) as tmp:
-            tmp.write(payload)
-            tmp.flush()
-            os.fsync(tmp.fileno())
-            tmp_path = Path(tmp.name)
-        os.replace(tmp_path, path)
+        tmp_path = path.parent / f".hot_state.{os.getpid()}.tmp"
+        try:
+            with open(tmp_path, "wb") as tmp:
+                tmp.write(payload)
+                tmp.flush()
+                os.fsync(tmp.fileno())
+            os.replace(tmp_path, path)
+        finally:
+            try:
+                if tmp_path.exists():
+                    tmp_path.unlink()
+            except OSError:
+                pass

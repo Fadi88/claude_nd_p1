@@ -1,7 +1,7 @@
 {
   "claim_id": "claim_04_neighbor_injury",
   "policy_id": "POL-1002",
-  "initial_message": "My neighbor's nine-year-old daughter slipped and fell on the walkway in front of my house during the ice storm last week. She broke her wrist. Her parents are talking about medical bills. POL-1002.",
+  "initial_message": "My neighbor's nine-year-old daughter slipped and fell on the walkway in front of my house during the ice storm last week. She broke her wrist. Her parents are talking about medical bills. POL-1002. The accident happened on my front walkway, which is on my private property. I had not salted the walkway that morning.",
   "clarification_responses": {
     "where": "On my property — the public sidewalk runs along the edge of my yard, and she was walking up my front walkway to ring the doorbell when she slipped.",
     "property": "Yes, on my front walkway, which is on my property between the public sidewalk and my front door.",

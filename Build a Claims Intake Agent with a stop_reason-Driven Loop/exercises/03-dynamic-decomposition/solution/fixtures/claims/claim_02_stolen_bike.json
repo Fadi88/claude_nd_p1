@@ -1,7 +1,7 @@
 {
   "claim_id": "claim_02_stolen_bike",
   "policy_id": "POL-1007",
-  "initial_message": "I'd like to report a theft. My bike was stolen yesterday morning. It's a 2024 commuter bike, I paid about $800 for it last year. My renters policy is POL-1007.",
+  "initial_message": "I'd like to report a theft. My bike was stolen yesterday morning. It's a 2024 commuter bike, I paid about $800 for it last year. My renters policy is POL-1007. It was locked with a Kryptonite U-lock through the frame and rear wheel at the bike rack in front of my office building.",
   "clarification_responses": {
     "locked": "Yes, it was locked. I used a Kryptonite U-lock through the frame and rear wheel.",
     "where": "At the bike rack in front of my office building. There are cameras but I haven't asked building security yet.",
